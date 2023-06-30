@@ -1,4 +1,4 @@
-const url = 'http://localhost:8082/api/servicio'
+const url = 'https://backendtallerapi.onrender.com/api/servicio'
 const listarDatos = async () => {
   let respuesta = ''
   let body = document.getElementById('contenido')
@@ -48,7 +48,7 @@ const editar = (servicios) => {
 
 
   const eliminar = (servicio) =>{
-    const url = 'http://localhost:8082/api/servicio';
+    const url = 'https://backendtallerapi.onrender.com/api/servicio';
 
     Swal.fire({
         title: 'Estas seguro?',
@@ -86,7 +86,7 @@ const editar = (servicios) => {
   const registrar = async () => {
     let _servicio = document.getElementById('servicio').value 
     let _valor = document.getElementById('valor').value 
-    const url = 'http://localhost:8082/api/servicio';
+    const url = 'https://backendtallerapi.onrender.com/api/servicio';
   
       let servicio = {
         servicio: _servicio,
@@ -129,14 +129,12 @@ const editar = (servicios) => {
   const actualizar = async () => {
     let _servicio = document.getElementById('servicioM').value 
     let _valor = document.getElementById('valorM').value 
-    const url = 'http://localhost:8082/api/servicio';
+    const url = 'https://backendtallerapi.onrender.com/api/servicio';
   
     let servicio = {
         servicio:_servicio,
         valor:_valor
       }
-
-      console.log(servicio);
   
       const response = await fetch(url, {
         method: 'PUT',
